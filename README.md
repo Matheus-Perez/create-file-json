@@ -47,4 +47,4 @@ essa opção(Translation structure) foi criada para ser utilizado junto com a bi
 
 ## Autores
 
-* **Matheus Perez** - *Projeto inicial* - [PurpleBooth](https://github.com/Matheus-Perez)
+* **Matheus Perez** - *Projeto inicial* - [Perez](https://github.com/Matheus-Perez)
