@@ -4,6 +4,11 @@ facilita a criação de arquivos json
 
 Inicialmente criado para utilizar junto com a biblioteca de [Tradução](#)
 
+Obs. Não implementado a criação de json com sub chaves ex: 
+'"usuario": {
+    "nome": "teste"
+  }'
+
 
 ## INSTRUÇÕES
 
