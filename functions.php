@@ -18,13 +18,10 @@ function deleteDirectories($dir)
 {
     //-- OPEN DIRECTORIES
     $ponteiro  = opendir($dir);
-    $c = 0;
     //-- I SEND ALL SUB DIRECTORIES TO BE ABLE TO DELETE
     while ($dirName = readdir($ponteiro))
     {
-        $c++;
-        //-- GET ONLY OF THE 3 POSITION THAT IS WHAT I INTEREST
-        if($c > 2)
+        if($dirName != "." && $dirName != "..")
         {
             //-- VERIFICO SE TEM ALGUM ARQUIVO DENTRO
             $subDir = $dir.$dirName;
@@ -45,7 +42,7 @@ function deleteFiles($dir)
     foreach(scandir($dir) as $file)
     {
         if ('.' === $file || '..' === $file) continue;
-        if (is_dir("$dir/$file")) rmdir_recursive("$dir/$file");
+        if (is_dir("$dir/$file")) deleteFiles("$dir/$file");
         else unlink("$dir/$file");
     }//-- FOREACH
 }//-- DELETEFILES
