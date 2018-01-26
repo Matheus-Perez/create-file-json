@@ -11,9 +11,12 @@ Obs. Não implementado a criação de json com sub chaves ex:
 
 
 ## INSTRUÇÕES
+Exemplos de arquivo cvs
 
-A utilização é bem simples, na raiz do arquivo está disponibilizado dois modelos de arquivos csv para serem utilizados.
-Existe somente dois modelos:  
+Exemplo 1: 
+
+![alt text](https://github.com/Matheus-Perez/create-file-json/blob/master/assets/dist/images/exemple_one.jpg)
+
 
 ####Only one file
 Nessa opção você deve usar um arquivo csv no mesmo padrão do arquivo de exemplo 'exemple_one_file.csv',
