@@ -24,6 +24,7 @@ Criar um arquivo csv igual a do exemplo 1, somente 2 colunas uma para o nome da 
 Forma 2: 
 
 ![alt text](https://github.com/Matheus-Perez/create-file-json/blob/master/assets/dist/images/exemple_two.jpg)
+
 Na forma dois ele vai gerar pastas separadas para cada coluna criada, nessa forma a primeira linha do seu arquivo deve ser para o nome das pastas, sempre deixando a primeira coluna para o nome das keys como mostrado no exemplo 2
 
 essa Forma foi criada para ser utilizado junto com a biblioteca de [Tradução](#)
