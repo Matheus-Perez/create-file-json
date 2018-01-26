@@ -1,46 +1,34 @@
-# CREATE-FILE-JSON
+# CREATE-FILE-JSON(Beta 0.5)
 
-facilita a criação de arquivos json 
-
+facilita a criação de arquivos json.
 Inicialmente criado para utilizar junto com a biblioteca de [Tradução](#)
 
-Obs. Não implementado a criação de json com sub chaves ex: 
-'"usuario": {
-    "nome": "teste"
+Obs. Não implementado a criação de json de sub chaves dentro da sub Chaves ex: 
+"usuario": {
+    "nome": "teste",
+    "endereco: {
+        "rua": "teste de rua"
+    }
   }'
 
 
 ## INSTRUÇÕES
-Exemplos de arquivo cvs
+A duas formas de gerar o Json 
 
-Exemplo 1: 
+Forma 1: 
 
 ![alt text](https://github.com/Matheus-Perez/create-file-json/blob/master/assets/dist/images/exemple_one.jpg)
 
+Criar um arquivo csv igual a do exemplo 1, somente 2 colunas uma para o nome da chave e outra para o valor da chave, não se esqueça de que quado for criar uma sub chave tem que abrir e fechar a chave '{}' 
 
-####Only one file
-Nessa opção você deve usar um arquivo csv no mesmo padrão do arquivo de exemplo 'exemple_one_file.csv',
-nesse arquivo somente tem 2 colunas a primeira coluna é a ‘chave’ e a segunda é o valor.
-Depois de escolhido o arquivo e selecionado o modo é só clicar no botão 'gerar'
-que ele vai te disponibilizar um botão para download do seu arquivo
+Forma 2: 
 
-####Translation structure
-Nessa opção vc deve usar o arquivo csv no  mesmo padrão do arquivo de exemplo 'translate.csv', 
-as duas primeiras linhas desse arquivo não devem ser mexidas 
+![alt text](https://github.com/Matheus-Perez/create-file-json/blob/master/assets/dist/images/exemple_two.jpg)
+Na forma dois ele vai gerar pastas separadas para cada coluna criada, nessa forma a primeira linha do seu arquivo deve ser para o nome das pastas, sempre deixando a primeira coluna para o nome das keys como mostrado no exemplo 2
 
-linha 1 coluna 2: Nome do seu arquivo json 
-Linha 2: nessa linha ficara os nomes das suas pastas a primeira coluna deve sempre ser deixada
-sempre para as chaves
-Linha 3 para baixo: aqui que ficaram a suas chaves e os valores de acordo com cada pasta
+essa Forma foi criada para ser utilizado junto com a biblioteca de [Tradução](#)
 
-Linha de error: Depois que foi coloca essa linha abaixo dela só deve conter valores referente a 
-erros
-
-Pode adicionar quantas pastas quiser desde que a coluna de observações sege a última.
-
-essa opção(Translation structure) foi criada para ser utilizado junto com a biblioteca de 
-[Tradução](#)
-
+Na raiz do projeto existe os dois arquivos cvs citados no texto acima.
 
 ## Construído com
 
