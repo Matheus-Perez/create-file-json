@@ -1,15 +1,7 @@
-# CREATE-FILE-JSON(Beta 0.5)
+# CREATE-FILE-JSON(V. 1.0)
 
 facilita a criação de arquivos json.
 Inicialmente criado para utilizar com a biblioteca de [Tradução](#)
-
-Obs. Não implementado a criação de json de sub chaves dentro da sub Chaves ex: 
-"usuario": {
-    "nome": "teste",
-    "endereco: {
-        "rua": "teste de rua"
-    }
-  }'
 
 
 ## INSTRUÇÕES

@@ -1,15 +1,11 @@
-course;Curso
-grade;Serie
-cod_grade;Cód. Serie
-class;Turma
-cod_class;Cód. Turma
-edit;editar
-school;Escuela
-year;Año
-error;dsadasdsa
-error1;dsadas
-teste;dsadas dsad
-exemplo1;{
-nome;teste 
-email;teste@teste.com.br
+usuario;{
+nome;matheus
+outros;{
+telefone ;4564646
+endereco ;{
+rua;dnsamdnsa,mdas
+bairro;dskadjsahdjksadas
 ;}
+;}
+;}
+email;dsajdjkashjkdash

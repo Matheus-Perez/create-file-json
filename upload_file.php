@@ -111,7 +111,13 @@ for($i=$p; $i < $row; $i++)
         {
             if(!$isSub)//-- SE NAO FOR SUB ELE SOMENTE INSERE VIRGULA
             {
-                $comma = ",";
+                //-- VERIFICO SE O PROXIMO VAI FECHAR A SUB CHAVE
+                $nexValue = $array_json[$i+1][1];
+
+                if($nexValue != "}")
+                {
+                    $comma = ",";
+                }//-- IF
             }//-- IF
             else//-- SE FOR VIGULA ELE VERIFICA SE É O ULTIMO ELEMENTO DO ITEM
             {
@@ -133,7 +139,34 @@ for($i=$p; $i < $row; $i++)
         //-- SE TIVER A CHAVES ELE SUBISTITUI O TEXTO ORIGIAL
         if(empty($keys))
         {
-            $txt = '"'.$keyName.'": "'.$value.'"'.$comma."\n";//-- CASO NÃO TENHA CHAVES
+
+            //-- VERIFICO SE O VALOR É UM FECHAMENTO DE SUBCHAVE
+            if($value != "}")
+            {
+                $txt = '"'.$keyName.'": "'.$value.'"'.$comma."\n";//-- CASO NÃO TENHA CHAVES
+            }
+            else
+            {
+                if($i == $row -1)
+                {$txt = "} \n }";}
+                else
+                {
+                    $nexValue = $array_json[$i+1][1];
+
+                    if($nexValue != "}")
+                    {
+                        $txt = "}, \n";
+                    }//-- IF
+                    else
+                    {
+                        $txt = "} \n";
+                    }
+
+                }
+
+            }
+
+
         }//-- IF
         else if ($keys == "{")
         {
@@ -145,8 +178,18 @@ for($i=$p; $i < $row; $i++)
             if($i == $row -1)
             {$txt = $keys."\n }";}
             else//-- SE NAO FOR O ULTIMO ELE SOMENTE FECHA A SUBCHAVE E COLOCA VIRGULA
-            {$txt = $keys.", \n";}
+            {
+                //--- VERIFICO SE O PROXIMO É UMA CHAVE
+                $nexValue = $array_json[$i+1][1];
+
+                if($nexValue != "}")
+                {$txt = $keys.", \n";}else
+                {
+                    $txt = $keys."\n";
+                }
+            }
         }//-- ELSE IF }
+        //    echo "$keys || $txt <br>";
         fileEdit($dir,"a",$txt);
     }//-- END FOR COLUMN
 }//-- FOR
