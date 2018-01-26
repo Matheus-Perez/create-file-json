@@ -1,5 +1,4 @@
 {
-"save": "Guardar",
 "course": "Curso",
 "grade": "Serie",
 "cod_grade": "Cód. Serie",
@@ -8,8 +7,11 @@
 "edit": "editar",
 "school": "Escuela",
 "year": "Año",
-"error": {
- "error1": "dsadas",
-"teste": "dsadas dsad" 
- } 
+"error": "dsadasdsa",
+"error1": "dsadas",
+"teste": "dsadas dsad",
+"exemplo1":{
+"nome": "teste",
+"email": "teste@teste.com.br"
+}
  }

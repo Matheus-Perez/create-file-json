@@ -1,5 +1,6 @@
 jQuery.noConflict();
 var form;
+var paginaPHPImportacao = "upload_file.php";
 
 
 //-- QUANDO A PAGINA É CARREGADA
@@ -18,20 +19,7 @@ jQuery(document).ready(function ()
 
     jQuery("#Enviar").click(function ()
     {
-        var paginaPHPImportacao = "";
-        if(jQuery("#oneFile").is(":checked"))
-        {
-            paginaPHPImportacao = "upload_file.php";
-        }
-        else
-        {
-            if(jQuery("#translateFile").is(":checked"))
-            {paginaPHPImportacao = "upload_file_translate.php";}
-            else
-            {alert("Select a way to generate excel.");return;}
-
-        }
-        /*===========================*/
+         /*===========================*/
         if(form != "")
         {
             jQuery.ajax({
@@ -55,7 +43,7 @@ jQuery(document).ready(function ()
                         alert(result);
                         return;
                     }
-                    jQuery("#msgReturn").html("<a href='download_file.php?a="+retorno.file+"'><button type='button' class='btn btn-primary '> &nbsp;&nbsp;Download &nbsp;&nbsp;<i class='fa fa-cloud-download' aria-hidden='true'></i></button></a>")
+                    jQuery("#msgReturn").html("<a href='download_file.php'><button type='button' class='btn btn-primary '> &nbsp;&nbsp;Download &nbsp;&nbsp;<i class='fa fa-cloud-download' aria-hidden='true'></i></button></a>")
                 }
             });
         }

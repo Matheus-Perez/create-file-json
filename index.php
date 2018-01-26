@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Generate Json</title>
+    <title>Gerar Json</title>
 
     <link rel="stylesheet" type="text/css" href="assets/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
@@ -28,19 +28,13 @@
         <div id = "loading"></div>
         <div class="panel panel-primary margins-panel-home">
             <div class="panel-heading">
-                <h3 id="title_panel" class="panel-title"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Generate Json</h3>
+                <h3 id="title_panel" class="panel-title"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Gerar Json</h3>
             </div><!--END PANEL HEARDING-->
             <div class="panel-body">
 
                 <div class="form-group row">
                     <div class="col-md-12">
-                        <p class="font-weight-bold">Select a mode: </p>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="oneFile">Only one file
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="optradio" id="translateFile" checked>Translation structure
-                        </label>
+                        <p class="font-weight-bold">Seleciona um arquivo valido: (CSV)</p>
                     </div>
                 </div>
 <!--                <form enctype='multipart/form-data' action='upload_file.php' method='post'>-->
@@ -51,7 +45,7 @@
                 </div><!--form-group-->
                 <div class="form-group row">
                     <div class="col-md-12">
-                        <input type="submit" value="GENERATE" id="Enviar" class="btn btn-primary btn-block">
+                        <input type="submit" value="Gerar" id="Enviar" class="btn btn-primary btn-block">
                     </div><!--col-md-->
                 </div><!--form-group-->
 <!--                </form>-->
@@ -62,7 +56,7 @@
                 </div><!--form-group-->
                 <div class="for-group row">
                     <div class="col-md-12" style="text-align: center">
-                        <p class="font-weight-bold text-muted">Files and Documentation <a href="https://github.com/Matheus-Perez/create-file-json" target="_blank">here</a></p>
+                        <p class="font-weight-bold text-muted">Link do porjeto no gitHub:  <a href="https://github.com/Matheus-Perez/create-file-json" target="_blank">Aqui</a></p>
                     </div>
                 </div><!--col-md-->
             </div><!--END PANEL BODY-->

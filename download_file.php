@@ -1,7 +1,7 @@
 <?php
 
 
-$fileWay = $_GET['a'];
+$fileWay = "generete_json";
 
 $directory = $fileWay; //diretorio para compactar
 $zipfile = "$fileWay.zip"; // nome do zip gerado

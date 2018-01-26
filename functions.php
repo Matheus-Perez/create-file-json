@@ -3,6 +3,19 @@
 error_reporting(E_ALL | E_STRICT);
 ini_set('display_errors', 'On');
 
+//-- CRIA A ESTRUTURA INCIAL (PASTA E ARQUIVOS)
+function creatDirectories($dir, $column, $fileName)
+{
+    //-- VERIFICO SE A COLUNA NÃO ESTA VAZIA OU SE O ARQUIVO EXISTE
+    if($column != "" || !file_exists($dir))
+    {@mkdir($dir,0777);}//-- CRIO OS DIRETORIOS
+
+    //-- CRIO OS ARQUIVOS INICIAIS
+    $dirjSON =$dir."/".$fileName;
+    //-- CRIA O ARQUIVO JSON INICIAL
+    fileEdit($dirjSON,"a","{\n");
+}
+
 //-- FILL IN THE TEXT FILE
 function fileEdit($dir,$mode, $text)
 {
@@ -16,6 +29,11 @@ function fileEdit($dir,$mode, $text)
 //-- DELL DIRECTORIES
 function deleteDirectories($dir)
 {
+    //-- AAPAGO QUALQUER ARQUIVO GERADO NA RAIZ
+    if(file_exists("generete_json/file.json"))
+    {unlink("generete_json/file.json");}
+
+
     //-- OPEN DIRECTORIES
     $ponteiro  = opendir($dir);
     //-- I SEND ALL SUB DIRECTORIES TO BE ABLE TO DELETE
@@ -39,6 +57,7 @@ function deleteDirectories($dir)
 //-- DELETE FILES
 function deleteFiles($dir)
 {
+    //-- APAGO OS DEMAIS ARQUIVOS DENTRO DAS PASTAS
     foreach(scandir($dir) as $file)
     {
         if ('.' === $file || '..' === $file) continue;
@@ -50,9 +69,9 @@ function deleteFiles($dir)
 //-- DELETE FILE ZIP
 function deleteZip($name)
 {
-    $zipFile = __DIR__."../$name.zip";
+    $zipFile = __DIR__."/$name.zip";
     if(file_exists($zipFile))
-    { unlink($zipFile);}
+    {unlink($zipFile);}
 }//-- DELETEZIP
 
 
