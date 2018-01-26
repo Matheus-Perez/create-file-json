@@ -4,6 +4,11 @@ facilita a criação de arquivos json
 
 Inicialmente criado para utilizar junto com a biblioteca de [Tradução](#)
 
+Obs. Não implementado a criação de json com sub chaves ex: 
+'"usuario": {
+    "nome": "teste"
+  }'
+
 
 ## INSTRUÇÕES
 
@@ -42,4 +47,4 @@ essa opção(Translation structure) foi criada para ser utilizado junto com a bi
 
 ## Autores
 
-* **Matheus Perez** - *Projeto inicial* - [PurpleBooth](https://github.com/Matheus-Perez)
+* **Matheus Perez** - *Projeto inicial* - [Perez](https://github.com/Matheus-Perez)
